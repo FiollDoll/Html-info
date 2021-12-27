@@ -11,18 +11,16 @@
 			text-shadow: 0 0 3px black;
 		}
 		kod{
-			background-color: darkslategray;
-			height: 200px;
-	    	width:1000px;
-  			padding:1px;
-	    	color: white;	
+			margin: 1em 0;
+			background: lightgrey;
+			padding: 0.16em 1.5em;	
 		}
-		kod:hover{
-			background-color: gray;
-			height: 200px;
-	    	width:1000px;
-  			padding:1px;
-	    	color: white;	
+		a{
+			text-decoration: none;
+			color: black;
+		}
+		a:hover{
+			text-shadow: 0 0 3px black
 		}
 	</style>
 	</head>
@@ -35,10 +33,10 @@
 					<a href = "#json">Json</a>
 				</li>
 				<li>
-					<a href = "#bs">Bs</a>
+					<a href = "#Bs">Bs</a>
 				</li>
 				<li>
-					<a href = "#Rich">Rich</a>
+					<a href = "#rich">Rich</a>
 				</li>
 			</ul>
 
@@ -48,9 +46,37 @@
 			<p>
 				json - это сохранение информации с файлов. Допустим мы хотим сохранить переменную name. Вот что для этого нужно:
 			</p>
-			<kod>
-				import json<br><br>
-				name - ""<br><br>def save():<br># Загрузите файл json, если он существует<br>;;;;if os.path.exists("Filen.json"):<br>;;;;;;;;with open("Filen.json") as file1:<br>;;;;;;;;;;;;contents = json.load(file1)<br><br>;;;;;;;;#Проверка переменной, если её нет, то её значение ""<br>;;;;;;;;if len(contents) > 0:<br>;;;;;;;;;;;;if contents[0] != "":<br>;;;;;;;;;;;;;;;;name = contents[0]<br><br>;;;;;;;;;;;;# Создайте файл json, если он не существует<br>;;;;;;;;;;;;else:<br>;;;;;;;;;;;;;;;;with open("Filen.json", "w") as file1<br>:;;;;;;;;;;;;;;;;;;;;json.dump([name], file1, indent=2, ensure_ascii=False)
+				<kod>import json<br><br></kod>
+				<kod>name - ""</kod>
+				<br>
+				<br>
+				<kod>def save():</kod>
+				<br>
+				<kod># Загрузите файл json, если он существует</kod>
+				<br>
+				<kod>;;;;if os.path.exists("Filen.json"):</kod>
+				<br>
+				<kod>;;;;;;;;with open("Filen.json") as file1:</kod>
+				<br>
+				<kod>;;;;;;;;;;;;contents = json.load(file1)</kod>
+				<br>
+				<br>
+				<kod>;;;;;;;;#Проверка переменной, если её нет, то её значение ""</kod>
+				<br>
+				<kod>;;;;;;;;if len(contents) > 0:</kod>
+				<br>
+				<kod>;;;;;;;;;;;;if contents[0] != "":</kod>
+				<br>
+				<kod>;;;;;;;;;;;;;;;;name = contents[0]</kod>
+				<br>
+				<br>
+				<kod>;;;;;;;;;;;;# Создайте файл json, если он не существует</kod>
+				<br>
+				<kod>;;;;;;;;;;;;else:</kod>
+				<br>
+				<kod>;;;;;;;;;;;;;;;;with open("Filen.json", "w") as file1:</kod>
+				<br>
+				<kod>;;;;;;;;;;;;;;;;;;;;json.dump([name], file1, indent=2, ensure_ascii=False)</kod>
 			</kod>
 			<p>
 				Это загрузка из файла и сохранение. В остальном уже стоит работать самому.
@@ -61,14 +87,35 @@
 			<p>
 				С помощью BeautifulSoup можно брать информацию с сайтов. Например:
 			</p>
-			<kod>
-				#импортируем библиотеки<br>import requests<br>from bs4 import BeautifulSoup<br><br>#Cтраница, которую мы парсим<br>url = 'https://store.steampowered.com/app/262060/Darkest_Dungeon/'<br>response = requests.get(url)<br><br>soup = BeautifulSoup(response.text, 'lxml')<br><br>quotes = soup.find_all('div', class_='apphub_AppName') # выводится два раза т.к два элемента<br><br>for quote in quotes:<br>;;;;print(quote.text)</kod><br>
-
+				<kod>#импортируем библиотеки</kod>
+				<br>
+				<kod>import requests</kod>
+				<br>
+				<kod>from bs4 import BeautifulSoup</kod>
+				<br>
+				<br>
+				<kod>#Cтраница, которую мы парсим</kod>
+				<br>
+				<kod>url = 'https://store.steampowered.com/app/262060/Darkest_Dungeon/'</kod>
+				<br>
+				<kod>response = requests.get(url)</kod>
+				<br>
+				<br>
+				<kod>soup = BeautifulSoup(response.text, 'lxml')</kod>
+				<br>
+				<br>
+				<kod>quotes = soup.find_all('div', class_='apphub_AppName') # выводится два раза т.к два элемента</kod>
+				<br>
+				<br>
+				<kod>for quote in quotes:</kod>
+				<br>
+				<kod>;;;;print(quote.text)</kod>
+				<br>
 			<p1 id = "rich" style = "color: darkred; font-size: 250%; ">
 				Rich
 			</p1>
 			<p>
-				Странная библиотека, которая работает в командной строке. Однако всё равно полезная.<br>Начну с print. С помощи этого модуля можно менять цвет текста(не только). Чтобы это сделать, нужно прописать:<br><kod>from rich import print<br><br>print("Hello, [red]World[/red]![blue]T[/blue][green]e[/green][red]s[/red][yellow]t[/yellow] ")</kod>
+				Странная библиотека, которая работает в командной строке. Однако всё равно полезная.<br>Начну с print. С помощи этого модуля можно менять цвет текста(не только). Чтобы это сделать, нужно прописать:<br><kod>from rich import print</kod><br><br><kod>print("Hello, [red]World[/red]![blue]T[/blue][green]e[/green][red]s[/red][yellow]t[/yellow] ")</kod>
 			</p>
 		</div>
 	</body>
