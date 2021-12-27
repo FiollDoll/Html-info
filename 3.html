@@ -23,18 +23,16 @@
 			text-shadow: 0 0 3px black;
 		}
 		kod{
-			background-color: darkslategray;
-			height: 200px;
-	    	width:1000px;
-  			padding:1px;
-	    	color: white;	
+			margin: 1em 0;
+			background: lightgrey;
+			padding: 0.14em 1.5em;	
 		}
-		kod:hover{
-			background-color: gray;
-			height: 200px;
-	    	width:1000px;
-  			padding:1px;
-	    	color: white;	
+		a{
+			text-decoration: none;
+			color: black;
+		}
+		a:hover{
+			text-shadow: 0 0 3px black
 		}
 		</style>
 	</head>
@@ -44,8 +42,8 @@
 			<p1 style = "font-size: 250%; color: darkred; position: relative; left: 450px;">
 			HTML
 			</p1>
-			<p>
-				(Табов нет. Всё будет указано "" вместо < и >, так как это тоже код)
+			<p style = "color: red;">
+				(Табов нет. Всё будет указано "" вместо, так как это тоже код. Нужно убрать в коде)
 				кнопки для перехода:
 			</p>
 			<ul>
@@ -62,9 +60,7 @@
 			<p>
 			Итак, покажу основной код, который должен быть обязательно:
 			</p><br>
-			<kod>
-				"!DOCTYPE html"<br><br>"head"<br>"title"Telebot"/title"<br>"meta charset = "utf-8""<br>"/head"<br><br>"body"<br>"/body"<br>"html"
-			</kod>
+			<kod><"!DOCTYPE html"></kod><br><br><kod><"head"></kod><br><kod><"title">Титул<"/title"></kod><br><kod><"meta charset = "utf-8""></kod><br><kod><"/head"></kod><br><br><kod><"body"></kod><br><kod><"/body"></kod><br><kod><"html"></kod>
 			<p>
 				Итак, !DOCTYPE html - это обозначение что используется версия html. "title"Telebot"/title" - Это название вкладки.
 			</p>
@@ -72,20 +68,16 @@
 				Текст
 			</p1>
 			<p>
-				Чтобы переносить текст на сайт, можно сделать такие правки в коде:<br>Заголовок пишется таким образом: <em>"h"Заголовок"/h"</em>. К h можно прибавлять цифры от 1 до 6. Чем цифра больше, тем меньше.<br>Можно просто написать текст, после чего он выведится, но лучше писать так: "p" Абзац "/p"<br>Специальные символы:<br><kod>"br" - тоже самое что и /n, но в html.<br>"em""/em" - Курсив текст<br>"b"Жирный текст"/b"<br>"li" "/li" - Это типо списка. </kod><br>Приукрасим li немного. С помощью li type="circle", перед текстом будет круглешок. Нужно обьязательно поставиль "ul".<br><kod>"ul"<br>"li type ="circle"<br>Текст<br>"/li"<br>"/ul"</kod><br><lol><input type='button' value='Подробнее' onclick='Opener()' style ="background-color: white;"></lol>
+				Чтобы переносить текст на сайт, можно сделать такие правки в коде:<br>Заголовок пишется таким образом: <em><"h">Заголовок<"/h"></em>. К h можно прибавлять цифры от 1 до 6. Чем цифра больше, тем меньше.<br>Можно просто написать текст, после чего он выведится, но лучше писать так: <"p"> Абзац <"/p"><br>Специальные символы:<br><"br"> - тоже самое что и /n, но в html.<br><"em">Курсив<"/em"><br><"b">Жирный текст<"/b"><br><"li"> <"/li"> - Это похоже на список. <br>Приукрасим li немного. С помощью li type="circle", перед текстом будет круглешок. Нужно обьязательно поставиль "ul".<br><kod><"ul"></kod><br><kod><"li type ="circle"></kod><br><kod>Текст</kod><br><kod><"/li"></kod><br><kod><"/ul"></kod><br><lol><input type='button' value='Подробнее' onclick='Opener()' style ="background-color: white;"></lol>
 			</p>
 			<p1 style = "font-size: 250%; color: darkred; position: relative; left: 450px;">
 			Css
 			</p1>
 			<p>
 				Css - это язык каскадных стилей. Чтобы использовать его, есть много способов. Начну с использования контейнеров:<br>
-			<kod>
-				"!DOCTYPE html"<br><br>"head"<br>"title"Telebot"/title"<br>"meta charset = "utf-8""<br><br>"style"<br> test{<br>color: red;<br>}<br>"/style"<br>"/head"<br><br>"body"<br>"test" Красный текст"/test"<br>"/body"<br>"html"<br>
-			</kod>
-			Создаётся контейнер внутри "style" "/style". Мы пишем название контейнера, в этом случае это test. Далее вставляем в него характеристики. Далее в "test" Красный текст"/test" мы используем этот контейнер. Внути "style" "/style" можно создавать хоть сколько контейнеров.<br>Настройки:<br>color: ; - задвёт цвет текста<br>font-size: 100%; - задаёт размер текста<br>position: relative; left(top, right): 450px; - задаёт позицию по пикселям<br>text-shadow: 0 0 3px black - создаёт тень<br><br>Нужно подсветить текст при наводе на него? Нужно сделать два контейнера, допустим:<br><kod>style<br>;;;;test{<br>;;;;;;;;color:white;<br>;;;;}<br>;;;;test:hover{<br>;;;;;;;;color:black;<br>;;;;}<br>/style</kod><br>Мы создаём обычный контейнер, а потом ещё один. Если указывать hover, то это подсветка при наведении.
+				<kod><"!DOCTYPE html"></kod><br><br><kod><"head"></kod><br><kod><"title"Telebot"/title"></kod><br><kod><"meta charset = "utf-8""></kod><br><br><kod><"style"></kod><br> <kod>test{</kod><br><kod>color: red;</kod><br><kod>}</kod><br><kod><"/style"></kod><br><kod><"/head"></kod><br><br><kod><"body"></kod><br><kod><"test"> Красный текст<"/test"></kod><br><kod><"/body"></kod><br><kod><"html"></kod><br>
+			Создаётся контейнер внутри "style" "/style". Мы пишем название контейнера, в этом случае это test. Далее вставляем в него характеристики. Далее в "test" Красный текст"/test" мы используем этот контейнер. Внути "style" "/style" можно создавать хоть сколько контейнеров.<br>Настройки:<br>color: ; - задвёт цвет текста<br>font-size: 100%; - задаёт размер текста<br>position: relative; left(top, right): 450px; - задаёт позицию по пикселям<br>text-shadow: 0 0 3px black - создаёт тень<br><br>Нужно подсветить текст при наводе на него? Нужно сделать два контейнера, допустим:<br><kod><"style"></kod><br><kod>;;;;test{</kod><br><kod>;;;;;;;;color:white;</kod><br><kod>;;;;}</kod><br><kod>;;;;test:hover{</kod><br><kod>;;;;;;;;color:black;</kod><br><kod>;;;;}</kod><br><kod><"/style"></kod><br>Мы создаём обычный контейнер, а потом ещё один. Если указывать hover, то это подсветка при наведении.
 			</p>
 		</div>
 	</body>
-
-
 </html>
