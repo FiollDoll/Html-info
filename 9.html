@@ -2,12 +2,68 @@
 
 <html>
 	<head>
-		<title>random</title>
+		<title>TelegramBotApi</title>
 		<meta charset = "utf-8">
+		<style type="text/css">
+		p1{
+			text-shadow: 0 0 3px black;
+		}
+		kod{
+			margin: 1em 0;
+			background: lightgrey;
+			padding: 0.14em 1.5em;	
+		}
+		a{
+			text-decoration: none;
+			color: black;
+		}
+		a:hover{
+			text-shadow: 0 0 3px black
+		}
+		</style>
 	</head>
 	<body>
-		
+	<p style = "color: red;">
+		(Табов нет. Могут быть ошибки)
+		кнопки для перехода:
+		<ul>
+			<li>
+				<a href = "#start">Установка модуля</a>
+			</li>
+			<li>
+				<a href = "#start1">Стартовый код</a>
+			</li>
+		</ul>
+	</p>
+	<br><br>
+	<p1 id = "start" style = "font-size: 250%; color: darkred; position: relative; left: 450px;">
+		Установка
+	</p1>
+	<p>
+		Чтобы начать работать с данной библиотекой, её нужно установить. Для этого нужно прописать в терминал:<br><br>
+		<kod>pip install pyTelegramBotAPI</kod><br><br>
+		ВАЖНО: Нужно качать именно эту библиотеку
+	</p>
+	<p1 id = "start1" style = "font-size: 250%; color: darkred; position: relative; left: 450px;">
+		Стартовый код
+	</p1>
+	<p>
+	Итак, для начала импортируем основные библиотеки. Получим токен(смотреть ниже). Сделаем команду, которая выводится при старте. Потом сделаем так, Чтобы бот не завершал свою работу.
+	<br><br>
+	<kod>import telebot</kod><br>
+	<kod>from telebot import types</kod><br><br>
+
+	<kod>bot = telebot.TeleBot("2135657858:AAHXgPFoh4qNxZh4MOPTMvNkhUH6BGrdAKQ")</kod><br><br>
+
+
+
+	<kod>@bot.message_handler(commands=['start', 'Start'])</kod><br>
+	<kod>def write_start(message):</kod><br>
+	<kod>bot.send_message(message.from_user.id, "Текст")</kod><br><br>
+
+	<kod>bot.polling()</kod>
+	</kod>
+	<br><br>
+	</p>
 	</body>
-
-
 </html>
