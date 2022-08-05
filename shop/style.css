@@ -9,6 +9,7 @@ foot{
 	grid-template-columns: 100%; /*Редактировать значения*/
 	height: 150px;
 	background-color: #743D3FFF;
+	padding-top: 50px;
 }
 ul.menu > li{
 	font-size: 	200%;
@@ -25,9 +26,7 @@ th, td{
 	border: 1px solid black;
 	font-size: 130%;
 }
-table{
-	padding-left: 100px;
-}
+
 body{
 	background-color: #C0909664;
 }
@@ -43,8 +42,8 @@ div > table{
 	padding-left: 100px ;
 }
 .newText{
-	font-size: 130%;
-	padding-left: 40px;
+	font-size: 150%;
+	padding-top: 20px;
 }
 *{
 	padding: 0;
@@ -53,14 +52,17 @@ div > table{
 Big{
 	display: grid;
 	grid-template-columns: 100%;
-	background-color: #AD3646FF;
 	height: 40px;
 }
 .bigText{
 	text-align: center;
-	font-size: 150%;
+	font-size: 170%;
+}
+.goodText{
+	font-size: 200%;
+	background-color: #FFC900;
+	border-radius: 20px;
 }
 p{
-	padding-left: 30px;
-	padding-right: 30px;
+	padding-left: 10px;
 }
